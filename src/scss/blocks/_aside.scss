@@ -1,0 +1,11 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    background: #353542;
+    border-radius: 10px;
+    background-image: url(./../img/bg-leaf.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 15px 22px 30px 17px;
+}

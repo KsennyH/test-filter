@@ -1,0 +1,10 @@
+mixin sort-by(list)
+    .sort-by 
+        .sort-by__title Sort by :
+        ul.sort-by__list
+            each item in list
+                li.sort-by__item 
+                    button(type="button" data-sort=item.dataSort).btn-sort
+                        svg.btn-sort__icon 
+                            use(xlink:href="@img/sprite.svg#" + item.icon)
+                        span.btn-sort__text #{item.text}

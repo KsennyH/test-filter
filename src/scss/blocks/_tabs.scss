@@ -1,0 +1,10 @@
+.tabs {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+}

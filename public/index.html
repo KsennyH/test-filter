@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body> 
+    <div class="container">
+      <header class="header"> 
+        <div class="header__top"> <a class="logo" href="/">Marketplace </a>
+          <form class="search-form" action="/">
+            <input class="search-form__input" type="text" placeholder="Search for a product, flower, etc">
+            <button class="search-form__button">
+              <svg class="search-form__icon"> 
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+          <div class="header__tabs">
+            <button class="btn border-gradient" id="tab"> 
+              <svg class="btn__icon">
+                <use xlink:href="img/sprite.svg#flower"></use>
+              </svg><span class="btn__text">Buds</span>
+            </button>
+            <button class="btn border-gradient" id="tab"> 
+              <svg class="btn__icon">
+                <use xlink:href="img/sprite.svg#flower"></use>
+              </svg><span class="btn__text">Edible</span>
+            </button>
+            <button class="btn border-gradient" id="tab"> 
+              <svg class="btn__icon">
+                <use xlink:href="img/sprite.svg#flower"></use>
+              </svg><span class="btn__text">Non Edible</span>
+            </button>
+            <button class="btn border-gradient" id="tab"> 
+              <svg class="btn__icon">
+                <use xlink:href="img/sprite.svg#flower"></use>
+              </svg><span class="btn__text">Concentrate</span>
+            </button>
+          </div>
+        </div>
+        <div class="header__bottom"> 
+          <div class="header__range">
+            <div class="range">
+              <div class="range__title filter-title">Price Range</div>
+              <div class="range__slider" id="price-slider"></div>
+              <div class="range__inputs">
+                <label class="range__label"> 
+                  <input class="range__input" type="number" min="0" max="9999" placeholder="0" id="price-0"><span class="range__dollar">$</span>
+                </label>
+                <label class="range__label"> 
+                  <input class="range__input" type="number" min="0" max="9999" placeholder="9999" id="price-1"><span class="range__dollar">$</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="header__range">
+            <div class="range">
+              <div class="range__title filter-title">ТНС, %           </div>
+              <div class="range__slider">
+                <div class="range__scale"> 
+                  <div class="range__bar"></div>
+                </div>
+                <button class="range__toggle range__toggle--min" type="button"> </button>
+                <button class="range__toggle range__toggle--max" type="button"></button>
+                <div class="range__tooltip">65 %</div>
+              </div>
+              <div class="range__inputs">
+                <label class="range__label range__label--right">
+                  <input class="range__input" type="number" min="0" max="100" placeholder="100"/><span class="range__dollar">%</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="header__range">
+            <div class="range">
+              <div class="range__title filter-title">CBD, %           </div>
+              <div class="range__slider">
+                <div class="range__scale"> 
+                  <div class="range__bar"></div>
+                </div>
+                <button class="range__toggle range__toggle--min" type="button"> </button>
+                <button class="range__toggle range__toggle--max" type="button"></button>
+                <div class="range__tooltip">65 %</div>
+              </div>
+              <div class="range__inputs">
+                <label class="range__label range__label--right">
+                  <input class="range__input" type="number" min="0" max="100" placeholder="100"/><span class="range__dollar">%</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="header__nose">
+            <div class="nose"> 
+              <div class="nose__text filter-title">Nose</div>
+              <div class="nose__inner"><img class="nose__image" src="img/nose.svg" alt="nose">
+                <div class="nose__minmax-wrapper"><span class="nose__minmax">min</span><span class="nose__minmax">max</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="header__sort"> 
+            <div class="sorting"> 
+              <button class="sorting-filter border-gradient" type="button"> 
+                <svg class="sorting-filter__icon"> 
+                  <use xlink:href="img/sprite.svg#filter"></use>
+                </svg>
+              </button>
+              <div class="sort-by"> 
+                <div class="sort-by__title">Sort by :</div>
+                <ul class="sort-by__list">
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="date-new">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#calendar-new"></use>
+                      </svg><span class="btn-sort__text">Date (New first)</span>
+                    </button>
+                  </li>
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="date-old">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#calendar-old"></use>
+                      </svg><span class="btn-sort__text">Date (Old first)</span>
+                    </button>
+                  </li>
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="price-high">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#arrow-high"></use>
+                      </svg><span class="btn-sort__text">Price (High first)</span>
+                    </button>
+                  </li>
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="price-low">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#arrow-low"></use>
+                      </svg><span class="btn-sort__text">Price (Low first)</span>
+                    </button>
+                  </li>
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="arrow-high">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#calendar-new"></use>
+                      </svg><span class="btn-sort__text">Total THC (High first)</span>
+                    </button>
+                  </li>
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="thc-low">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#arrow-low"></use>
+                      </svg><span class="btn-sort__text">Total THC (Low first)</span>
+                    </button>
+                  </li>
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="cbd-high">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#calendar-new"></use>
+                      </svg><span class="btn-sort__text">Total CBD (High first)</span>
+                    </button>
+                  </li>
+                  <li class="sort-by__item"> 
+                    <button class="btn-sort" type="button" data-sort="cbd-low">
+                      <svg class="btn-sort__icon"> 
+                        <use xlink:href="img/sprite.svg#arrow-low"></use>
+                      </svg><span class="btn-sort__text">Total CBD (Low first)</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main"> 
+        <div class="main__tabs tabs">
+          <div class="tabs__result">1034,5 Results</div>
+          <ul class="tabs__list">
+            <li class="tabs__item">
+              <div class="tab"> <span class="tab__text">100% Indica</span>
+                <button class="tab__close"> 
+                  <svg class="tab__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="tabs__item">
+              <div class="tab"> <span class="tab__text">&gt;50% Indica</span>
+                <button class="tab__close"> 
+                  <svg class="tab__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="tabs__item">
+              <div class="tab"> <span class="tab__text">Indoor</span>
+                <button class="tab__close"> 
+                  <svg class="tab__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="tabs__item">
+              <div class="tab"> <span class="tab__text">Flower</span>
+                <button class="tab__close"> 
+                  <svg class="tab__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="tabs__item">
+              <div class="tab"> <span class="tab__text">Michigan</span>
+                <button class="tab__close"> 
+                  <svg class="tab__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="tabs__item">
+              <div class="tab"> <span class="tab__text">SellerSeller</span>
+                <button class="tab__close"> 
+                  <svg class="tab__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="tabs__item">
+              <div class="tab"> <span class="tab__text">Distributor</span>
+                <button class="tab__close"> 
+                  <svg class="tab__icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="main__aside"> 
+          <aside class="aside border-gradient">
+            <div class="filter"> 
+              <button class="filter__btn" type="button"><span class="filter__title">Classification</span>
+                <svg class="filter__icon"> 
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">100% Indica</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">100% Sativa</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">&gt;50% Indica</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">&gt;50% Sativa</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter"> 
+              <button class="filter__btn" type="button"><span class="filter__title">Production Method</span>
+                <svg class="filter__icon"> 
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Indoor</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Outdoor</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Greenhouse</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Light Deprivation</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Mixed Light</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Other</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter"> 
+              <button class="filter__btn" type="button"><span class="filter__title">Size</span>
+                <svg class="filter__icon"> 
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Flower</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Pre-Roll Flower</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Pre-Roll Infused</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Pre-Roll Leaf</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Shake</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Smalls</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Trim</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Shake</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Keef</span>
+                  </label>
+                </li>
+                <li class="filter__item">
+                  <label class="checkbox">
+                    <input class="checkbox__input" type="checkbox"/><span class="checkbox__custom"></span><span class="checkbox__name">Fresh Frozen</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.tab {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 3px;
+    font-size: 12px;
+    line-height: 135%;
+    background-color: #297019;
+    box-shadow: inset -5px -5px 16px rgba(138, 138, 138, 0.09);
+    border-radius: 20px;
+    padding: 5px 8px;
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__icon {
+        width: 14px;
+        height: 14px;
+    }
+}

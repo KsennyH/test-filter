@@ -1,0 +1,15 @@
+.btn-sort {
+    display: flex;
+    align-items: end;
+    column-gap: 10px;
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+    }
+    &__text {
+        line-height: 135%;
+    }
+}

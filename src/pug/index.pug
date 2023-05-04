@@ -1,0 +1,69 @@
+extends layout/app
+
+block page
+    .container
+
+        header.header  
+            .header__top 
+                include ./chunk/logo
+                include ./chunk/search-form
+                .header__tabs
+                    +btn("Buds")
+                    +btn("Edible")
+                    +btn("Non Edible")
+                    +btn("Concentrate")
+            .header__bottom 
+                .header__range
+                    .range
+                        .range__title.filter-title Price Range
+                        .range__slider(id="price-slider")
+                        .range__inputs
+                            label.range__label 
+                                input(type="number" min="0" max="9999" placeholder="0" id="price-0").range__input
+                                span.range__dollar $
+                            label.range__label 
+                                input(type="number" min="0" max="9999" placeholder="9999" id="price-1").range__input
+                                span.range__dollar $
+
+                .header__range
+                    +range("ТНС, %", "65 %")
+                .header__range
+                    +range("CBD, %", "65 %")
+                .header__nose
+                    include ./chunk/nose
+                .header__sort 
+                    include ./chunk/sorting
+
+        main.main 
+            .main__tabs.tabs
+                .tabs__result 1034,5 Results
+                ul.tabs__list
+                    li.tabs__item
+                        +tab("100% Indica")
+                    li.tabs__item
+                        +tab(">50% Indica")
+                    li.tabs__item
+                        +tab("Indoor")
+                    li.tabs__item
+                        +tab("Flower")
+                    li.tabs__item
+                        +tab("Michigan")
+                    li.tabs__item
+                        +tab("SellerSeller")
+                    li.tabs__item
+                        +tab("Distributor")
+            .main__aside 
+                aside.aside.border-gradient
+
+                    +filter(jsonData.classificationTitle, jsonData.classification)
+                    +filter(jsonData.productionTitle, jsonData.production)
+                    +filter(jsonData.sizeTitle, jsonData.size)
+            
+
+
+
+
+
+        
+
+    

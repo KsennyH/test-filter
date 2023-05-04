@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;   
+}
+
+body {
+    font-family: "Proxima Nova";
+    font-size: 1rem;
+    line-height: 1;
+    color: #fff;
+    background-color: #171722;
+    min-width: 320px; 
+}
+
+.container {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

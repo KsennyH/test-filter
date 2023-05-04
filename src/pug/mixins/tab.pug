@@ -1,0 +1,6 @@
+mixin tab(text)
+    .tab 
+        span.tab__text #{text}
+        button.tab__close 
+            svg.tab__icon
+                use(xlink:href="@img/sprite.svg#close")

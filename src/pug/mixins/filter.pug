@@ -1,0 +1,12 @@
+mixin filter(title, list)
+    .filter 
+        button(type="button").filter__btn
+            span.filter__title #{title}
+            +svg("filter__icon", "arrow")
+        ul.filter__list
+            each item in list 
+                li.filter__item
+                    label.checkbox
+                        input(type="checkbox").checkbox__input 
+                        span.checkbox__custom
+                        span.checkbox__name #{item.text}

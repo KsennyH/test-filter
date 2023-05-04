@@ -1,0 +1,113 @@
+{
+    "classificationTitle": "Classification",
+    "classification": [
+        {
+            "text": "100% Indica"
+        },
+        {
+            "text": "100% Sativa"
+        },
+        {
+            "text": ">50% Indica"
+        },
+        {
+            "text": ">50% Sativa"
+        }
+    ],
+    "productionTitle": "Production Method",
+    "production": [
+        {
+            "text": "Indoor"
+        },
+        {
+            "text": "Outdoor"
+        },
+        {
+            "text": "Greenhouse"
+        },
+        {
+            "text": "Light Deprivation"
+        },
+        {
+            "text": "Mixed Light"
+        },
+        {
+            "text": "Other"
+        }
+    ],
+    "sizeTitle": "Size",
+    "size": [
+        {
+            "text": "Flower"
+        },
+        {
+            "text": "Pre-Roll Flower"
+        },
+        {
+            "text": "Pre-Roll Infused"
+        },
+        {
+            "text": "Pre-Roll Leaf"
+        },
+        {
+            "text": "Shake"
+        },
+        {
+            "text": "Smalls"
+        },
+        {
+            "text": "Trim"
+        },
+        {
+            "text": "Shake"
+        },
+        {
+            "text": "Keef"
+        },
+        {
+            "text": "Fresh Frozen"
+        }
+    ],
+    "sorting": [
+        {
+            "text": "Date (New first)",
+            "icon": "calendar-new",
+            "dataSort": "date-new"
+        },
+        {
+            "text": "Date (Old first)",
+            "icon": "calendar-old",
+            "dataSort": "date-old"
+        },
+        {
+            "text": "Price (High first)",
+            "icon": "arrow-high",
+            "dataSort": "price-high"
+        },
+        {
+            "text": "Price (Low first)",
+            "icon": "arrow-low",
+            "dataSort": "price-low"
+        },
+        {
+            "text": "Total THC (High first)",
+            "icon": "calendar-new",
+            "dataSort": "arrow-high"
+        },
+        {
+            "text": "Total THC (Low first)",
+            "icon": "arrow-low",
+            "dataSort": "thc-low"
+        },
+        {
+            "text": "Total CBD (High first)",
+            "icon": "calendar-new",
+            "dataSort": "cbd-high"
+        },
+        {
+            "text": "Total CBD (Low first)",
+            "icon": "arrow-low",
+            "dataSort": "cbd-low"
+        }
+    ]
+}

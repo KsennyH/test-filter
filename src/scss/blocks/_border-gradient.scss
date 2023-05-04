@@ -1,0 +1,14 @@
+.border-gradient {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        bottom: -2px;
+        left: -1px;
+        right: -1px;
+        background: linear-gradient(174.36deg, rgba(132, 213, 44, 0.36) 11.39%, rgba(23, 23, 34, 0) 189.78%);
+        border-radius: 11px;
+        z-index: -1;
+    }
+}

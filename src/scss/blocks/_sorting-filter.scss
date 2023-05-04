@@ -1,0 +1,13 @@
+.sorting-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: #353542;
+    border-radius: 10px;
+    &__icon {
+        width: 24px;
+        height: 24px;
+    }
+}

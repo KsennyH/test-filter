@@ -1,0 +1,13 @@
+mixin range(title, number)
+    .range
+        .range__title.filter-title #{title}           
+        .range__slider
+            .range__scale 
+                .range__bar
+            button(type="button").range__toggle.range__toggle--min 
+            button(type="button").range__toggle.range__toggle--max
+            .range__tooltip #{number}
+        .range__inputs
+            label.range__label.range__label--right
+                input(type="number" min="0" max="100" placeholder="100").range__input
+                span.range__dollar %

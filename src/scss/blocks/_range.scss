@@ -1,0 +1,144 @@
+.range {
+    &__input::-webkit-outer-spin-button,
+    &__input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &__input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    &__title {
+        margin-bottom: 23px;
+    }
+
+    &__slider {
+        margin-bottom: 15px;
+    }
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__label {
+        position: relative;
+        color: #959595;
+        font-size: 14px;
+        background-color: #212129;
+        border: 1px solid #606060;
+        border-radius: 3px;
+        padding: 2px 5px;
+        &--right {
+            margin-left: auto;
+        }
+    }
+
+    &__input {
+        padding-right: 10px;   
+    }
+
+    &__dollar {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.noUi-target {
+    height: 4px;
+    background-color: #30303D;
+    border-radius: 3px;
+    border: none;
+    box-shadow: none;
+}
+
+.noUi-connect {
+    background-color: #7ACB22;
+    box-shadow: 0px 3px 15px rgba(132, 213, 44, 0.31);
+    border-radius: 3px;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+    display: none;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;
+    right: -16px;
+}
+
+.noUi-handle {
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(193.42deg, #85D62D 23.76%, #6BAB2B 86.01%);
+    box-shadow: 0px 10px 27px rgba(30, 29, 46, 0.3), inset 3px 5px 12px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+    right: 0;
+} 
+
+.noUi-tooltip {
+    font-family: 'Proxima Nova';
+    background-color: #30303D;
+    border-radius: 3px;
+    border: none;
+    line-height: 135%;
+    color: #fff;
+    padding: 2px 5px;
+    margin-bottom: 7px;
+}
+
+.range {
+    &__slider {
+        position: relative;
+    }
+    &__scale {
+        background: #30303D;
+        border-radius: 3px;
+        width: 100%;
+        height: 4px;
+    }
+    &__bar {
+        width: 60%;
+        background: #7ACB22;
+        box-shadow: 0px 3px 15px rgba(132, 213, 44, 0.31);
+        border-radius: 3px;
+        height: 4px;
+    }
+    &__toggle {
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(193.42deg, #85D62D 23.76%, #6BAB2B 86.01%);
+        box-shadow: 0px 10px 27px rgba(30, 29, 46, 0.3), inset 3px 5px 12px rgba(255, 255, 255, 0.2);
+        position: absolute;
+        border-radius: 50%;
+        top: -6px;
+        cursor: pointer;
+        &--min {
+            left: 0;
+        }
+        &--max {
+            left: 60%;
+        }
+    }
+    &__tooltip {
+        position: absolute;
+        background-color: #30303D;
+        border-radius: 3px;
+        line-height: 135%;
+        padding: 2px 5px;
+        left: 59%;
+        top: -45px;
+    }
+}
+
+
+

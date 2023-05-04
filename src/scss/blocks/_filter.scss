@@ -1,0 +1,23 @@
+.filter {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 135%;
+        margin-bottom: 10px;
+    }
+    &__btn {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__icon {
+        width: 12px;
+        height: 7px;
+    }
+}

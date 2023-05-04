@@ -1,0 +1,13 @@
+.nose {
+    &__text {
+        margin-bottom: 5px;
+    }
+    &__inner {
+        display: inline-block;
+    }
+    &__minmax-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
